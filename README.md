@@ -116,12 +116,12 @@ Microsoft Hazel Desktop - English (Great Britain)
 Microsoft Hortense Desktop - French (France)
 ```
 
-´pyttsx´ is the library needed to convert text to speech.
-1º we create an engine with the ´init´ constructor to start the library.
+`pyttsx` is the library needed to convert text to speech.
+1º we create an engine with the `init` constructor to start the library.
 2º With the loop what we get is to get the features of the library but related to our device,
-in this case I had only the spanish and english language and going to 'languages' in the windows search engine I installed the french language.
+in this case I had only the spanish and english language and going to `languages` in the windows search engine I installed the french language.
 
-3º The list ´a´ collects the 3 languages in the form of id being:
+3º The list `a` collects the 3 languages in the form of id being:
 - a[0] - Spanish
 - a[1] - English USA
 - a[2] - English UK
@@ -132,13 +132,13 @@ The rest is to reproduce the audio.
 
 ## Save
 
-The application has an associated '.xlsx' file, in my case named 'lang2'. This file is divided in 4 sheets named a, b, c and d, each one for a specific function. The main one will be the sheet a where the words or phrases inserted in the app will be saved, the rest of the tabs are optional and we will see them later.
+The application has an associated `.xlsx` file, in my case named `lang2`. This file is divided in 4 sheets named a, b, c and d, each one for a specific function. The main one will be the sheet a where the words or phrases inserted in the app will be saved, the rest of the tabs are optional and we will see them later.
 
 ![excel_sheet](./assets/sheet_a.jpg)
 
 As we can see in the image, the sheet is divided in 4 columns that coincide with the entry boxes of the interface.
 
-Returning to the interface, the 'Save' button saves in the excel sheet the words found in the text boxes, each one in its corresponding column. If any of the text boxes is blank, it will be automatically named as 'none' in the text sheet, also it is necessary to always insert a word in the Spanish language since this is the base language from which I started and this way I was sure to fill it whenever I inserted a new word.
+Returning to the interface, the 'Save' button saves in the excel sheet the words found in the text boxes, each one in its corresponding column. If any of the text boxes is blank, it will be automatically named as `none` in the text sheet, also it is necessary to always insert a word in the Spanish language since this is the base language from which I started and this way I was sure to fill it whenever I inserted a new word.
 
 It is also implemented that all words are saved in lowercase to facilitate other functionalities and that only a certain number of characters can be inserted, in this case 20 has been set as a limit but this can be changed in the following lines of code:
 
@@ -174,7 +174,7 @@ If all fields are blank, this error message will jump:
 
 ![error_blank_fields](./assets/blank_fields.jpg)
 
-This function initially looks for exact matches for example if you type in the Spanish language the word ´hello´, it will look for that exact word in the database and if it finds it will return its translations. In the event that the exact match is not found, it will be searched if there is any phrase where the word appears isolated for example ´hello, how are you?´. This works for all languages.
+This function initially looks for exact matches for example if you type in the Spanish language the word `hello`, it will look for that exact word in the database and if it finds it will return its translations. In the event that the exact match is not found, it will be searched if there is any phrase where the word appears isolated for example `hello, how are you?`. This works for all languages.
 
 However, in this case there may be several coincidences, in the previous case also but here more likely. In that case, all the options found will appear in the terminal. In a future code update this will be corrected so that all matches appear in a separate tab.
 
@@ -188,13 +188,13 @@ Also, before performing the deletion a new warning window will appear asking if 
 
 ## Create PDF
 
-This function automatically creates a ´pdf´ file where 3 columns are displayed, each corresponding to a language. 
+This function automatically creates a `pdf` file where 3 columns are displayed, each corresponding to a language. 
 
 ![pdf_file_img](./assets/pdf_file.jpg)
 
 Here the words in the database are sorted in alphabetical order and separated in cells.
 
-The file is automatically named ´Idiomas_.pdf´ and saved in the folder where you have the program.
+The file is automatically named `Idiomas_.pdf` and saved in the folder where you have the program.
 
 ## Suggest Translation
 
